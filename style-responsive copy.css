@@ -1,0 +1,48 @@
+body {
+    background-color: red;
+}
+
+h1 {
+    font-size: 10rem;
+}
+
+.box {
+    width: 25%;
+    height: 200px;
+    background-color: #333;
+    margin: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+p {
+    font-size: 2rem;
+    background-color: #fff;
+    padding: 4rem;
+}
+
+/*  MEDIA QUERIES */
+
+@media screen and (max-width:1284px) {
+    h1 {
+        font-size: 9rem;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 46%;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .box {
+        width: 100%;
+    }
+}

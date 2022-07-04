@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Arthur DENIS</title>
+    <meta name="author" content="Arthur DENIS">
+    <meta name="description" content="Bienvenue sur la page du projet mairie de PARIS">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ///////////////// HEADER ////////////////// -->
+    <header>
+        <div class="logo-black">
+            <img src="images/logo_black.png" alt="Logo_Arthur_DENIS">
+        </div>
+        <nav>
+            <a href="index.html#home">Home</a>
+            <a href="index.html#quisuisje">Qui suis-je ?</a>
+            <a href="index.html#projets">Projets</a>
+            <a href="index.html#contact">Contact</a>
+            <!-- <img src="images/ci_moon.png" alt="moon" id="moon"></a> -->
+            <a class="moon" href="#"><img src="images/ci_moon.png" alt="moon" id="moon"></a>
+        </nav>
+    </header>
+    <!-- ///////////// FIN HEADER ///////////////-->
+    <main>
+        <section class="mairie">
+            <h1>Projet Photos - Mairie de Paris 18e</h1>
+            <div class="paragraphe1-mairie">
+                <div class="p1-mairie">
+                    <p>La <span>Mairie de Paris</span> lance une campagne de communication qui vante la <span>beauté</span> et <span>l’identité</span> de ses arrondissements afin de
+                        mettre en lumière les atouts de la ville. Notre agence participe à cet appel d’offre et représentera le <span>18ème arrondissement</span>.
+                    </p>
+                </div>
+                <div class="logo-mairie">
+                    <img src="images/VILLE_DE_PARIS_LOGO .png" alt="LOGO mairie de Paris">
+                </div>
+            </div>
+        </section>
+        <!-- SWIPER -->
+        <section class="affiches">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/mur-des-je-t'aime.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/mur-coeur2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Sexshop.jpg" />
+                    </div>
+                </div>
+        </section>
+        <!-- FIN SWIPER -->
+        <!-- <section class="paragraphe2-mairie">
+            <div class="affiches">
+                <img src="images/mur-des-je-t'aime.jpg" alt="">
+                <img src="images/mur-coeur2.jpg" alt="">
+                <img src="images/Sexshop.jpg" alt="">
+            </div>
+        </section> -->
+
+        <section class="paragraphe3-mairie">
+            <div class="photos-mockup">
+                <img id="mur" src="images/Mockup-mur-des-je-taime.jpg" alt="Image Mockup mur des je t'aime" height="550" width="375">
+                <img id="sexshop" src="images/mockup-sexshop.jpg" alt="Image mockup sexshop" height="560" width="560">
+            </div>
+        </section>
+        <p class="phrase">“Tu es ma première pensée le matin, et ma dernière le soir.”</p>
+        <p class="logiciel">Logiciel : Photoshop</p>
+        <div class="bouton-retour">
+            <a href="index.html#projets">
+                <p>- Retour aux projets -</p>
+            </a>
+        </div>
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+
+    <script>
+        // swiper js
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+</body>
+
+</html>

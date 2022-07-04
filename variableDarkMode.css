@@ -1,0 +1,78 @@
+:root {
+    --blackblue: #141C34;
+    --violet: #6328B9;
+    --white: #000;
+    --black: #fff;
+}
+
+body {
+    background-color: var(--blackblue);
+}
+
+.quisuisje-section {
+    background: none !important;
+}
+
+.contact {
+    background: none !important;
+}
+
+nav a:hover {
+    color: var(--violet) !important;
+    text-decoration: none;
+    margin: 3.5rem;
+    font-size: 2.6rem;
+}
+
+.quisuisje-section h2 {
+    color: var(--black) !important;
+}
+
+.texte-moi p {
+    color: var(--black) !important;
+    font-size: 2rem;
+}
+
+
+.texte-moi a#mon-cv:hover {
+    width: 22.4rem;
+    height: 8.5rem;
+    background-color: var(--black) !important;
+    border-radius: 1rem;
+    color: var(--violet);
+    text-align: center;
+    text-decoration: none;
+    padding: 2.4rem;
+}
+
+.categorie {
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px !important;
+    width: 44.5rem;
+    height: 8rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+}
+
+#mon-cv {
+    color: var(--black) !important;
+    font-size: 2.4rem;
+}
+
+#mon-cv:hover {
+    color: var(--violet) !important;
+    font-size: 2.4rem;
+}
+
+.competences h2 {
+    color: var(--black) !important;
+}
+
+
+.brever h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 13.8rem;
+    color: white !important;
+}

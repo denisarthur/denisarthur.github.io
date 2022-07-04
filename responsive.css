@@ -1,0 +1,139 @@
+/*  MEDIA QUERIES */
+
+@media screen and (max-width:390px) {
+
+    :root {
+        font-size: 30%;
+
+    }
+
+    h1 {
+        font-size: 9rem;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tete img {
+        height: 70%;
+        width: 70%;
+    }
+
+    nav a.moon {
+        margin: 0rem !important;
+        margin-left: 2rem !important;
+        padding-top: 0.4rem !important;
+    }
+
+    #moon {
+        height: 65%;
+        width: 65%;
+    }
+
+    .logo-black {
+        margin-left: 0rem;
+    }
+
+    .presentation {
+        margin-left: 5rem;
+    }
+
+    .tete {
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        margin-top: 5rem;
+    }
+
+    .logo-black img {
+        width: 80%;
+        height: 80%;
+
+    }
+
+    nav a {
+        margin: 2rem;
+    }
+
+    .image-et-texte {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-et-texte .moi2,
+    .image-et-texte .texte-moi {
+        width: 100%;
+    }
+
+    .texte-moi p {
+        padding: 2rem 2rem 0rem 2rem;
+    }
+
+    .categorie button {
+        font-size: 150%;
+    }
+
+    .home {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+    }
+
+    .presentation {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-left: 0rem;
+
+    }
+
+    .black-line {
+        background-color: var(--black);
+        width: 39.5rem;
+        height: 0.6rem;
+        margin-right: 0rem !important;
+        margin-top: 2rem;
+    }
+
+    .col1 img,
+    .col2 img,
+    .col3 img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .les-contacts img {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .les-contacts p {
+        font-size: 2rem;
+
+    }
+
+
+
+
+
+
+
+}
+
+@media screen and (max-width:900px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 46%;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .box {
+        width: 100%;
+    }
+}

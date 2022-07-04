@@ -1,0 +1,1216 @@
+* {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+:root {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'poppins', 'swap';
+}
+
+/* /////////////////// HEADER ///////////////// */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-black {
+    margin-left: 10.5rem;
+}
+
+nav a.moon {
+    margin-right: 10.5rem !important;
+    display: block;
+    padding-top: 0.6rem;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: var(--black);
+    text-decoration: none;
+    margin: 3.5rem;
+    font-size: 2.6rem;
+    transition: color 0.2s;
+
+}
+
+nav a:hover {
+    color: var(--violet);
+    text-decoration: none;
+    margin: 3.5rem;
+    font-size: 2.6rem;
+    cursor: pointer;
+}
+
+nav a.moon {
+    margin: 0;
+}
+
+
+/* ////////////////////// HOME ///////////////// */
+.black-line {
+    background-color: var(--black);
+    height: 39.5rem;
+    width: 0.6rem;
+    margin-right: 2.8rem;
+}
+
+#salut {
+    font-size: 4rem;
+    margin: 0px;
+}
+
+#nom-prenom {
+    font-size: 7rem;
+    margin: 0px;
+    font-weight: 500;
+}
+
+#metier {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-weight: 400;
+}
+
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+}
+
+.bloc-texte {
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc-texte p,
+.bloc-texte h1,
+.bloc-texte h2 {
+    color: var(--black);
+}
+
+.tete img {
+    width: 57.8rem;
+    height: 63.4rem;
+}
+
+/* //////////////////// PROJETS //////////////// */
+
+.projets {
+    margin-bottom: 5rem;
+}
+
+.projets h2 {
+    font-size: 8rem;
+    font-weight: 50rem;
+    margin: 0rem;
+    text-align: center;
+    margin-top: 15rem;
+    margin-bottom: 9.4rem;
+    color: var(--black);
+}
+
+
+.categorie {
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 44.5rem;
+    height: 8rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+}
+
+.categorie button {
+    margin: auto;
+    border-radius: 0.5rem;
+    color: black;
+    width: 7.8rem;
+    height: 4.8rem;
+    margin: 1.6rem 2.4rem 1.6rem 0rem;
+    padding: 0rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.categorie button:hover {
+    background-color: #6328B9;
+    margin: auto;
+    border-radius: 0.5rem;
+    color: white;
+    width: 7.8rem;
+    height: 4.8rem;
+    margin: 1.6rem 2.4rem 1.6rem 0rem;
+    padding: 0rem;
+    border: none;
+}
+
+.categorie button.active {
+    background-color: #6328B9;
+    margin: auto;
+    border-radius: 0.5rem;
+    color: white;
+    width: 7.8rem;
+    height: 4.8rem;
+    margin: 1.6rem 2.4rem 1.6rem 0rem;
+    padding: 0rem;
+    border: none;
+}
+
+.categorie #tous {
+    margin-left: 2.4rem;
+}
+
+.work {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    /* margin-right: 16.5rem;
+    margin-left: 16.5rem; */
+}
+
+/* .work img {
+    display: block;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 2rem;
+    margin-top: 4rem;
+} */
+
+.work article {
+    width: 50rem;
+    height: 30rem;
+    border-radius: 2rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.work article:hover {
+    width: 50rem;
+    height: 30rem;
+    border-radius: 2rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+    transition: opacity .25s ease-in-out;
+
+}
+
+.work article img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+/* //////////////// ANIMATION //////////////// */
+
+.image::after {
+    content: '';
+    background-color: rgba(0, 0, 0, .75);
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+
+}
+
+.image::after,
+.image_caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.image:hover::after {
+    opacity: 1;
+}
+
+.image_caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    z-index: 2;
+    opacity: 0;
+}
+
+.caption_title {
+    display: block;
+    margin: 2rem 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    border-bottom: 1px solid;
+    color: white;
+}
+
+.design .image_caption {
+    transition: opacity .25s ease-in-out;
+}
+
+.image-caption img {
+    cursor: pointer;
+}
+
+.sous-categorie {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.design.image:hover .image_caption,
+.photo.image:hover .image_caption,
+.video.image:hover .image_caption {
+    opacity: 1;
+}
+
+/* ///////////// QUI SUI-JE ? ////////////////// */
+.quisuisje-section h2 {
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+    font-size: 8rem;
+    margin-bottom: 6rem;
+}
+
+.quisuisje-section {
+    background-image: url(images/etoiles.png);
+    margin-top: 8rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-right: 13rem;
+    padding-left: 13rem;
+    padding-bottom: 6.5rem;
+    padding-top: 6.5rem;
+}
+
+
+.image-et-texte {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texte-moi p {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.moi2 {
+    display: flex;
+    justify-content: center;
+}
+
+.moi2 img {
+    height: 53.3rem;
+    width: 40rem;
+    border-radius: 2rem;
+}
+
+.image-et-texte .moi2,
+.image-et-texte .texte-moi {
+    width: 60%;
+}
+
+
+.texte-moi a#mon-cv,
+.bouton-brever a#pdf-brever {
+    width: 22.4rem;
+    height: 8.5rem;
+    background-color: #6328B9;
+    border-radius: 1rem;
+    padding: 2.4rem;
+    border: none;
+    transition: background-color .5s;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.texte-moi a#mon-cv:hover {
+    width: 22.4rem;
+    height: 8.5rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    /* border: 0.5rem solid var(--violet); */
+    color: #6328B9;
+    text-align: center;
+    text-decoration: none;
+    padding: 2.4rem;
+}
+
+#mon-cv,
+#pdf-brever,
+#pdf-lego,
+#pdf-piv {
+    color: white;
+    font-size: 2.4rem;
+}
+
+#mon-cv:hover {
+    color: #6328B9;
+    font-size: 2.4rem;
+}
+
+.bouton-brever a:hover,
+.bouton-lego a:hover,
+.bouton-piv a:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+}
+
+.bouton-brever,
+.bouton-lego,
+.bouton-piv {
+    display: flex;
+    justify-content: center;
+}
+
+.bouton-piv {
+    margin-bottom: 5rem;
+}
+
+.bouton-lego a#pdf-lego,
+.bouton-piv a#pdf-piv {
+    width: 22.4rem;
+    height: 8.5rem;
+    background-color: #6328B9;
+    border-radius: 1rem;
+    padding: 2.4rem;
+    border: none;
+    transition: background-color .5s;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.boutonCV {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* .image-et-texte .moi2 img {
+    width: 90%;
+} */
+
+/* ///////////////// COMPETENCES //////////////// */
+.competences h2 {
+    text-align: center;
+    font-size: 6rem;
+    margin: 0rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.web h3,
+.video h3,
+.print h3 {
+    margin: 0rem;
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.web,
+.video,
+.print {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.6rem;
+    justify-content: center;
+}
+
+.col1,
+.col2,
+.col3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.liste1,
+.liste2,
+.liste3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.les3 p {
+    margin: 0px;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.les3 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10rem;
+    align-items: baseline;
+}
+
+/* ////////////////////// FOOTER /////////////// */
+.contact {
+    background-image: url(images/etoiles.png);
+    /* width: 100vw; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact h2 {
+    color: white;
+    font-size: 6rem;
+    text-align: center;
+    margin: 0px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.les-contacts {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5.4rem;
+}
+
+.les-contacts a {
+    text-decoration: none;
+}
+
+.phone-logo,
+.mail-logo,
+.map-logo {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+.phone,
+.mail,
+.map {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.phone p,
+.mail p,
+.map p {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.image-et-texte .moi2,
+.image-et-texte .texte-moi {
+    width: 45%;
+}
+
+.les-contacts p {
+    color: white;
+    font-size: 2.4rem;
+    margin: 0rem;
+}
+
+.en-bas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.en-bas p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.realisation {
+    margin-left: 10rem;
+}
+
+.tous-droits {
+    margin-right: 10rem;
+}
+
+/* SPAN OU PARAGRAPHE (MARGIN : PAR DEFAUT) */
+
+
+
+/* /////////////////// TRI /////////////// */
+.hide {
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    visibility: hidden !important;
+    transition: opacity .2s !important;
+}
+
+/* ****************** BREVER ************* */
+/* /////////////// PARAGRAPHE 1 ////////// */
+.bouton-retour {
+    margin-top: 5rem;
+    margin-left: 10.5rem;
+}
+
+.bouton-retour p {
+    color: black;
+    font-size: 2.4rem;
+}
+
+.bouton-retour p:hover {
+    color: #6328B9;
+    transition: color 0.2s;
+
+}
+
+.bouton-retour a {
+    text-decoration: none;
+}
+
+.brever h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 10rem;
+}
+
+.paragraphe1-brever {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p1-brever p {
+    text-align: end;
+    font-size: 2.5rem;
+}
+
+.p1-brever span {
+    color: #6328B9;
+}
+
+.paragraphe1-brever .p1-brever,
+.paragraphe1-brever .mockup1-brever {
+    width: 45%;
+
+}
+
+.paragraphe1-brever .mockup1-brever img {
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+    border-radius: 1.5rem;
+
+    /* height: 100%; */
+}
+
+/* /////////////// PARAGRAPHE 2 ////////// */
+
+.paragraphe2-brever {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 10rem;
+
+}
+
+.p2-brever p {
+    font-size: 2.5rem;
+}
+
+.p2-brever span {
+    color: #6328B9;
+}
+
+.paragraphe2-brever .p2-brever,
+.paragraphe2-brever .logo-brever {
+    width: 45%;
+}
+
+.paragraphe2-brever .logo-brever img {
+    width: 90%;
+    /* height: 100%; */
+}
+
+/* /////////////// PARAGRAPHE 3 ////////// */
+
+.paragraphe3-brever {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p3-brever p {
+    font-size: 2.5rem;
+    text-align: end;
+}
+
+.p3-brever span {
+    color: #6328B9;
+}
+
+.paragraphe3-brever .p3-brever,
+.paragraphe3-brever .mobile-cigusto {
+    width: 45%;
+}
+
+.paragraphe3-brever {
+    width: 90%;
+    /* height: 100%; */
+}
+
+.mobile-cigusto img {
+    width: 90%;
+}
+
+#orange-cigusto {
+    margin-right: 5rem;
+}
+
+
+
+.paragraphe1-brever,
+.paragraphe2-brever,
+.paragraphe3-brever {
+    margin-top: 9.6rem;
+}
+
+.logiciel {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+}
+
+/* ***************** CIGUSTO ************** */
+/* /////////////// PARAGRAPHE 1 ////////// */
+.cigusto h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 13.8rem;
+}
+
+.paragraphe1-cigusto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p1-cigusto p {
+    font-size: 2.5rem;
+}
+
+.p1-cigusto span {
+    color: #6328B9;
+}
+
+.paragraphe1-cigusto .p1-cigusto,
+.paragraphe1-cigusto .logos {
+    width: 40%;
+}
+
+.paragraphe1-cigusto .logos img {
+    width: 90%;
+}
+
+/* /////////////// PARAGRAPHE 2 ////////// */
+
+.paragraphe2-cigusto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p2-cigusto p {
+    font-size: 2.5rem;
+}
+
+.p2-cigusto span {
+    color: #6328B9;
+}
+
+.paragraphe2-cigusto .p2-cigusto,
+.paragraphe2-cigusto .mac {
+    width: 45%;
+}
+
+.paragraphe2-cigusto .mac img {
+    width: 90%;
+    /* height: 100%; */
+}
+
+.mac img {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* /////////////// PARAGRAPHE 3 ////////// */
+
+.paragraphe3-cigusto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p3-cigusto p {
+    font-size: 2.5rem;
+}
+
+.p3-cigusto span {
+    color: #6328B9;
+}
+
+.screens-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.screens-mobile img {
+    width: 50rem;
+    height: 50rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    ;
+}
+
+.paragraphe3-cigusto .p3-cigusto,
+.paragraphe3-cigusto .screens-mobile {
+    width: 50%;
+}
+
+.paragraphe3-cigusto .screens-mobile img {
+    width: 90%;
+}
+
+.paragraphe1-cigusto,
+.paragraphe2-cigusto,
+.paragraphe3-cigusto {
+    margin-top: 9.6rem;
+}
+
+/* **************** MAIRIE **************** */
+/* /////////////// PARAGRAPHE 1 ////////// */
+.mairie h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 13.8rem;
+    margin-bottom: 0rem;
+}
+
+.paragraphe1-mairie {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p1-mairie p {
+    font-size: 2.5rem;
+}
+
+.p1-mairie span {
+    color: #6328B9;
+}
+
+.paragraphe1-mairie .p1-mairie,
+.paragraphe1-mairie .mockup1 {
+    width: 45%;
+}
+
+.paragraphe1-mairie .mockup1 img {
+    width: 90%;
+    /* height: 100%; */
+}
+
+/* /////////////// PARAGRAPHE 2 ////////// */
+
+.paragraphe2-mairie {
+    display: flex;
+    align-items: center;
+}
+
+/* /////////////// PARAGRAPHE 3 ////////// */
+
+.paragraphe3-mairie {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p3-mairie p {
+    font-size: 2.5rem;
+}
+
+.paragraphe1-mairie,
+.paragraphe2-mairie,
+.paragraphe3-mairie {
+    margin-top: 9.6rem;
+}
+
+.photos-mockup {
+    display: flex;
+    margin-bottom: 7rem;
+}
+
+.photos-mockup img#mur {
+    margin-right: 8.3em;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+
+}
+
+.photos-mockup img#sexshop {
+    margin-left: 8.3em;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+
+}
+
+.phrase {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* **************** PHOTOSHOP ************* */
+/* /////////////// PARAGRAPHE 1 ////////// */
+.photoshop h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 13.8rem;
+    margin-bottom: 7rem;
+}
+
+.paragraphe1-photoshop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p1-photoshop p {
+    font-size: 3rem;
+}
+
+.p1-photoshop span {
+    color: #6328B9;
+}
+
+.paragraphe1-photoshop .p1-photoshop,
+.paragraphe1-photoshop .mbappe {
+    width: 45%;
+}
+
+.paragraphe1-photoshop .mbappe img {
+    width: 90%;
+    /* object-fit: cover; */
+}
+
+/* **************** VIDEOS **************** */
+/* /////////////// PARAGRAPHE 1 ////////// */
+.videos h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 13.8rem;
+    margin-bottom: 7rem;
+}
+
+.paragraphe1-video {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p1-video p {
+    font-size: 2.5rem;
+}
+
+.p1-video span {
+    color: #6328B9;
+}
+
+.paragraphe1-video .p1-video,
+.paragraphe1-video .video-CL {
+    width: 45%;
+}
+
+.paragraphe1-video .video-CL img {
+    width: 90%;
+    object-fit: cover;
+}
+
+/* ********* SWIPER ******** */
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: visible;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    border: 0.1rem solid;
+}
+
+.swiper-3d .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, .0), rgba(0, 0, 0, 0));
+}
+
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, .0), rgba(0, 0, 0, 0));
+}
+
+.affiches {
+    padding-bottom: 20rem;
+
+}
+
+/* ****************** PIV ************* */
+/* /////////////// PARAGRAPHE 1 ////////// */
+.piv h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 13.8rem;
+}
+
+.les-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo-lego {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragraphe1-piv p {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 5rem;
+}
+
+
+/* /////////////// PARAGRAPHE 2 ////////// */
+
+.paragraphe2-piv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p2-piv p {
+    font-size: 2.5rem;
+}
+
+/* /////////////// PARAGRAPHE 3 ////////// */
+
+.les-mockups {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mockup-canette {
+    margin-left: 20rem;
+}
+
+.mockup-proteine {
+    margin-right: 20rem;
+}
+
+.paragraphe3-piv p {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 5rem;
+}
+
+.paragraphe2-piv,
+.paragraphe3-piv {
+    margin-top: 20rem;
+}
+
+
+
+/* ****************** LEGO ************* */
+/* /////////////// PARAGRAPHE 1 ////////// */
+.lego1 h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 13.8rem;
+}
+
+.paragraphe1-lego {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p1-lego p {
+    font-size: 2.5rem;
+}
+
+.p1-lego span {
+    color: #6328B9;
+}
+
+.paragraphe1-lego .p1-lego,
+.paragraphe1-lego .logo-lego {
+    width: 45%;
+
+}
+
+.paragraphe1-lego .logo-lego img {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+}
+
+/* /////////////// PARAGRAPHE 2 ////////// */
+
+.paragraphe2-lego {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p2-lego p {
+    font-size: 2.5rem;
+}
+
+.p2-lego span {
+    color: #6328B9;
+}
+
+.paragraphe2-lego .p2-lego,
+.paragraphe2-lego .may-the-4 {
+    width: 45%;
+}
+
+.paragraphe2-lego .may-the-4 img {
+    width: 90%;
+    /* height: 100%; */
+}
+
+/* /////////////// PARAGRAPHE 3 ////////// */
+
+.paragraphe3-lego {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p3-lego p {
+    font-size: 2.5rem;
+}
+
+.p3-lego span {
+    color: #6328B9;
+}
+
+.paragraphe3-lego .p3-lego,
+.paragraphe3-lego .dv-image {
+    width: 45%;
+}
+
+.paragraphe3-lego .dv-image img {
+    width: 90%;
+    /* height: 100%; */
+}
+
+/* /////////////// PARAGRAPHE 4 ////////// */
+
+.paragraphe4-lego {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.p4-lego p {
+    font-size: 2.5rem;
+}
+
+.p4-lego span {
+    color: #6328B9;
+}
+
+.paragraphe4-lego .p4-lego,
+.paragraphe4-lego .faucon {
+    width: 45%;
+}
+
+.paragraphe4-lego .faucon img {
+    width: 90%;
+    /* height: 100%; */
+}
+
+/* /////////////// PARAGRAPHE 5 ////////// */
+
+.paragraphe5-lego {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10rem;
+}
+
+.p5-lego p {
+    font-size: 2.5rem;
+}
+
+.p5-lego span {
+    color: #6328B9;
+}
+
+.paragraphe5-lego .p5-lego,
+.paragraphe5-lego .faucon {
+    width: 45%;
+}
+
+.paragraphe5-lego .faucon img {
+    width: 90%;
+    /* height: 100%; */
+}
+
+
+
+.paragraphe1-lego,
+.paragraphe2-lego,
+.paragraphe3-lego,
+.paragraphe4-lego,
+.paragraphe5-lego {
+    margin-top: 9.6rem;
+}
